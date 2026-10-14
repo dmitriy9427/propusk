@@ -1,0 +1,84 @@
+.token {
+  padding: 14px;
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  word-break: break-all;
+  background: var(--surface-2);
+  border-radius: var(--radius-sm);
+}
+
+.header,
+.headerText {
+  color: #d9480f;
+}
+
+.payload,
+.payloadText {
+  color: #7048e8;
+}
+
+.signature,
+.signatureText {
+  color: #1c7ed6;
+}
+
+@media (prefers-color-scheme: dark) {
+  .header,
+  .headerText {
+    color: #ff922b;
+  }
+
+  .payload,
+  .payloadText {
+    color: #b197fc;
+  }
+
+  .signature,
+  .signatureText {
+    color: #74c0fc;
+  }
+}
+
+.parts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 16px;
+
+  & pre {
+    margin-top: 6px;
+    overflow-x: auto;
+    font-family: var(--mono);
+    font-size: 0.8125rem;
+  }
+}
+
+.log {
+  display: grid;
+  gap: 4px;
+  max-height: 320px;
+  padding: 0;
+  overflow-y: auto;
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  list-style: none;
+
+  & li {
+    padding: 4px 8px;
+    border-radius: 6px;
+  }
+
+  & time {
+    color: var(--muted);
+  }
+
+  & li[data-kind='refresh'],
+  & li[data-kind='retry'] {
+    background: var(--accent-soft);
+  }
+
+  & li[data-bad='true'] {
+    color: var(--danger);
+    background: var(--danger-soft);
+  }
+}

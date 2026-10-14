@@ -1,0 +1,48 @@
+.dialog {
+  width: min(440px, calc(100vw - 24px));
+  padding: 0;
+  margin: auto;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 24px 60px rgb(0 0 0 / 30%);
+
+  &::backdrop {
+    background: rgb(10 20 14 / 50%);
+    backdrop-filter: blur(3px);
+  }
+}
+
+.box {
+  display: grid;
+  gap: 16px;
+  padding: 20px 22px 22px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & h2 {
+    font-size: 1.125rem;
+    font-weight: 800;
+  }
+}
+
+.close {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  color: var(--muted);
+  cursor: pointer;
+  background: none;
+  border: 0;
+  border-radius: 8px;
+
+  & svg {
+    width: 18px;
+  }
+}

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Пропуск — учебный проект авторизации: JWT и refresh-токены с ротацией, 2FA, passkeys, OAuth 2.0 + PKCE, сессии, роли." />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <title>Пропуск — авторизация</title>
+    <style>
+      .boot { position: fixed; inset: 0; display: grid; place-items: center; background: #f3f4f1; }
+      .boot::after { content: 'П'; display: grid; place-items: center; width: 44px; height: 44px; font: 800 22px system-ui; color: #fff; background: #1f7a4d; border-radius: 12px; animation: boot 1.2s ease-in-out infinite; }
+      @keyframes boot { 50% { opacity: 0.5; scale: 0.92; } }
+      @media (prefers-color-scheme: dark) { .boot { background: #0f1411; } }
+    </style>
+  </head>
+  <body>
+    <div id="root"><div class="boot" role="status" aria-label="Загрузка"></div></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

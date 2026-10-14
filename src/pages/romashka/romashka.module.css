@@ -1,0 +1,131 @@
+/* Нарочно другое оформление: это «чужой сайт». */
+.page {
+  min-height: 100dvh;
+  color: #3b2a12;
+  background: #fff8e8;
+}
+
+.addressBar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 16px;
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  color: #5b4a2e;
+  background: #f1e6c8;
+  border-bottom: 1px solid #e2d3a8;
+}
+
+.demo {
+  color: #8a7650;
+}
+
+.card {
+  display: grid;
+  gap: 14px;
+  width: min(420px, calc(100% - 32px));
+  padding: 28px;
+  margin: 48px auto;
+  background: #fff;
+  border: 1px solid #ecdcb0;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgb(120 90 20 / 12%);
+}
+
+.brand {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 800;
+  color: #d4a017;
+
+  & svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.title {
+  font-size: 1.375rem;
+  font-weight: 800;
+}
+
+.text,
+.scopes {
+  font-size: 0.9rem;
+  color: #6b5a3a;
+}
+
+.accounts {
+  display: grid;
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.account {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 12px;
+  cursor: pointer;
+  border: 1px solid #ecdcb0;
+  border-radius: 12px;
+
+  &:has(input:checked) {
+    background: #fff3cf;
+    border-color: #d4a017;
+  }
+
+  & small {
+    color: #8a7650;
+  }
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  font-weight: 800;
+  color: #fff;
+  background: #d4a017;
+  border-radius: 50%;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.primary,
+.secondary {
+  min-height: 42px;
+  padding: 0 18px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 999px;
+}
+
+.primary {
+  color: #fff;
+  background: #d4a017;
+  border: 0;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+.secondary {
+  color: #6b5a3a;
+  background: transparent;
+  border: 1px solid #e2d3a8;
+}
+
+.error {
+  color: #b42318;
+}
